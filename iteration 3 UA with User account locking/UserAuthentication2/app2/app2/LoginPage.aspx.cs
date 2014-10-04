@@ -46,10 +46,10 @@ namespace app2
         #region Current Login_Click Method
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            //if (IsValid)
-            //{
-                AuthenticateUser(txtbxName.Text, txtbxPassword.Text);                
-            //}
+            if (IsValid)
+            {
+                AuthenticateUser(txtbxName.Text, txtbxPassword.Text);
+            }
         }
 
         #endregion

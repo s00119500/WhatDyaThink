@@ -10,7 +10,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-       <%-- <asp:ScriptManager runat="server">
+        <%-- <asp:ScriptManager runat="server">
             <Scripts>
             <asp:ScriptReference Name="MsAjaxBundle" />
             <asp:ScriptReference Name="jquery" />
@@ -26,11 +26,16 @@
             <asp:ScriptReference Name="WebFormsBundle" />
         </Scripts>
         </asp:ScriptManager>--%>
-    <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
+        <!-- the script manager is needed for ASP client side validators/ specifically jQuery-->
+        <asp:ScriptManager ID="sm1" runat="server">
+            <Scripts>
+                <asp:ScriptReference Name="jquery" />
+            </Scripts>
+        </asp:ScriptManager>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
     </form>
 </body>
 </html>

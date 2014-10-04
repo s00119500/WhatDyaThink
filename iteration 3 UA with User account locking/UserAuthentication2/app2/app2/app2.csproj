@@ -61,6 +61,7 @@
     <Content Include="App_Data\MyDatabasev1_log.ldf">
       <DependentUpon>MyDatabasev1.mdf</DependentUpon>
     </Content>
+    <Content Include="Global.asax" />
     <Content Include="Index.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="Register\Register.aspx" />
@@ -96,6 +97,9 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

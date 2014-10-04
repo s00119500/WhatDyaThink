@@ -11,18 +11,32 @@
                 <asp:Label Text="Name" runat="server" /></td>
             <td>
                 <asp:TextBox runat="server" ID="txtbxName" /></td>
+            <td>
+                <asp:RequiredFieldValidator ID="RFieldValidatortxtbxName" runat="server" ErrorMessage="Please enter a Name" ControlToValidate="txtbxName"></asp:RequiredFieldValidator>
+            </td>
         </tr>
         <tr>
             <td>
                 <asp:Label Text="Password" runat="server" /></td>
             <td>
                 <asp:TextBox runat="server" ID="txtbxPassword" /></td>
+            <td>
+                <asp:RequiredFieldValidator ID="RFieldValidatortxtbxPassword" runat="server" ErrorMessage="Please enter a Password" ControlToValidate="txtbxPassword"></asp:RequiredFieldValidator>
+            </td>
         </tr>
         <tr>
             <td>
                 <asp:Label Text="Email" runat="server" /></td>
             <td>
                 <asp:TextBox runat="server" ID="txtbxEmail" /></td>
+            <td>
+                <asp:RequiredFieldValidator ID="RFieldValidatortxtbxEmail" runat="server" ErrorMessage="Please enter an E-mail address" ControlToValidate="txtbxEmail"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidatorEmail"
+                    runat="server" ErrorMessage="Invalid Email" ControlToValidate="txtbxEmail"
+                    Display="Dynamic"
+                    ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">
+                </asp:RegularExpressionValidator>
+            </td>
         </tr>
         <tr>
             <td>
