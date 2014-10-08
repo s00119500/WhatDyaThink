@@ -48,6 +48,7 @@ namespace app2
         {
             if (IsValid)
             {
+                lblError.Text="";
                 AuthenticateUser(txtbxName.Text, txtbxPassword.Text);
             }
         }
@@ -108,6 +109,7 @@ namespace app2
                 SqlDataReader rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                 {
+
                     int RetryAttempts = Convert.ToInt32(rdr["RetryAttempts"]);
                     if (Convert.ToBoolean(rdr["AccountLocked"]))
                     {
@@ -123,6 +125,10 @@ namespace app2
                     {
                         FormsAuthentication.RedirectFromLoginPage(txtbxName.Text, false);
                     }
+                    //else
+                    //{
+                    //    lblError.Text = "Incorrect User name";
+                    //}
                 }
             }
         }
