@@ -31,7 +31,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">What Dya Think</a>
+                    <a class="navbar-brand" href="/Test/testPage.aspx">What Dya Think</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -65,6 +65,7 @@
             <!-- /.container-fluid -->
         </nav>
         <div>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:WhatDyaThinkSQLDatabaseConnectionString %>" SelectCommand="SELECT * FROM [Users_tbl]"></asp:SqlDataSource>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>

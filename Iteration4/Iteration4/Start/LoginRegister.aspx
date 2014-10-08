@@ -20,30 +20,52 @@
                                 <asp:Label Text="Name" runat="server" /></td>
                             <td>
                                 <input type="text" name="" runat="server" value="" id="txtbxRegisterName" placeholder="please enter a name" /></td>
+                            <td>
+                                <asp:RequiredFieldValidator ID="RFieldValidatortxtbxName" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtbxRegisterName"></asp:RequiredFieldValidator>
+                            </td>
                         </tr>
                         <tr>
                             <td>
                                 <asp:Label Text="Email" runat="server" /></td>
                             <td>
                                 <input type="email" name="" runat="server" value="" id="txtbxRegisterEmail" placeholder="please enter your Email" /></td>
+                            <td>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtbxRegisterEmail"></asp:RequiredFieldValidator>
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidatorEmail"
+                                    runat="server" ErrorMessage="*" ControlToValidate="txtbxRegisterEmail"
+                                    Display="Dynamic"
+                                    ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">
+                                </asp:RegularExpressionValidator>
+                            </td>
                         </tr>
                         <tr>
                             <td>
                                 <asp:Label Text="Password" runat="server" /></td>
                             <td>
                                 <input type="password" name="" runat="server" value="" id="txtbxRegisterPassword" placeholder="please enter a password" /></td>
+                            <td>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtbxRegisterPassword"></asp:RequiredFieldValidator>
+                                <asp:CompareValidator ErrorMessage="*" ControlToValidate="txtbxRegisterPassword" ControlToCompare="txtbxRegisterConfirmPassword" Operator="Equal" runat="server" />
+                            </td>
                         </tr>
                         <tr>
                             <td>
                                 <asp:Label Text="Confirm Passsword" runat="server" /></td>
                             <td>
                                 <input type="password" name="" runat="server" value="" id="txtbxRegisterConfirmPassword" placeholder="please confirm your password" /></td>
+                            <td>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtbxRegisterConfirmPassword"></asp:RequiredFieldValidator>
+                                <asp:CompareValidator ErrorMessage="*" ControlToValidate="txtbxRegisterConfirmPassword" ControlToCompare="txtbxRegisterPassword" Operator="Equal" runat="server" />
+                            </td>
                         </tr>
                         <tr>
                             <td>
                                 <asp:Label Text="Telephone" runat="server" /></td>
                             <td>
                                 <input type="tel" name="" runat="server" value="" id="txtbxRegisterTelephone" placeholder="please enter a telephone number" /></td>
+                            <td>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtbxRegisterTelephone"></asp:RequiredFieldValidator>
+                            </td>
                         </tr>
                         <tr>
                             <td></td>
@@ -51,6 +73,11 @@
                                 <asp:Button Text="Register" CssClass="btn btn-success" runat="server" ID="btnRegister" OnClick="btnRegister_Click" />
                             </td>
                         </tr>
+                        <tr>
+                            <td>
+                            <asp:Label Text="" ForeColor="Red" ID="lblError" runat="server" />
+                            </td>
+                        </tr> 
                     </table>
                 </div>
             </div>

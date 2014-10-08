@@ -92,6 +92,7 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <None Include="Scripts\_references.js" />
     <Content Include="Start\LoginRegister.aspx" />
+    <Content Include="Test\testPage.aspx" />
     <Content Include="Web.config" />
     <Content Include="Start\LoginMaster.Master" />
   </ItemGroup>
@@ -120,6 +121,13 @@
     </Compile>
     <Compile Include="Start\LoginRegister.aspx.designer.cs">
       <DependentUpon>LoginRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\testPage.aspx.cs">
+      <DependentUpon>testPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\testPage.aspx.designer.cs">
+      <DependentUpon>testPage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
