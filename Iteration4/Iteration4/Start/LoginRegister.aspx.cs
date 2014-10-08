@@ -32,14 +32,14 @@ namespace Iteration4.Start
                     SqlCommand cmd = new SqlCommand("AddUser", con);
                     cmd.CommandType = CommandType.StoredProcedure;
 
-                    SqlParameter username = new SqlParameter("@name", txtbxRegisterName.Value);
+                    SqlParameter username = new SqlParameter("@registerName", txtbxRegisterName.Value);
                     // FormsAuthentication calss is in System.Web.Security namespace
                     //string encryptedPassword = FormsAuthentication.
-                    //    HashPasswordForStoringInConfigFile(txtbxPassword.Text, "SHA1");
-                    //SqlParameter password = new SqlParameter("@Password", encryptedPassword);
-                    SqlParameter password = new SqlParameter("@password", txtbxRegisterPassword.Value);
-                    SqlParameter email = new SqlParameter("@email", txtbxRegisterEmail.Value);
-                    SqlParameter telephone = new SqlParameter("@phone", txtbxRegisterTelephone.Value);
+                    //HashPasswordForStoringInConfigFile(txtbxRegisterPassword.Value, "SHA1");
+                    //SqlParameter password = new SqlParameter("@password", encryptedPassword);
+                    SqlParameter password = new SqlParameter("@registerPassword", txtbxRegisterPassword.Value);
+                    SqlParameter email = new SqlParameter("@registerEmail", txtbxRegisterEmail.Value);
+                    SqlParameter telephone = new SqlParameter("@registerPhone", txtbxRegisterTelephone.Value);
                     // warnng below !!
                     cmd.Parameters.Add(username);
                     cmd.Parameters.Add(password);
@@ -50,7 +50,7 @@ namespace Iteration4.Start
                     int ReturnCode = (int)cmd.ExecuteScalar();
                     if (ReturnCode == -1)
                     {
-                        //lblError.Text = "User Name already in use, please choose another user name";
+                        lblError.Text = "User Name already in use, please choose another user name";
                     }
                     else
                     {
