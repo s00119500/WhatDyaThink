@@ -42,9 +42,11 @@
                         </li>
                         <li class="myLoginListItem">
                             <input type="text" name="" runat="server" id="txtbxLoginName" value="" placeholder="name" />
+                            <asp:Label Text="" ID="lblErrorLoginName" runat="server" />                           
                         </li>
                         <li class="myLoginListItem">
                             <input type="password" name="" id="txtbxLoginPassword" runat="server" placeholder="password" value=" " />
+                            <asp:Label Text="" ID="lblErrorLoginPassword" runat="server" />
                             <%--<br />--%>
                             <%--<a href="#" style="font-size:8px;"><u style="color:lightblue">forgot your password ?</u></a>--%>
                         </li>

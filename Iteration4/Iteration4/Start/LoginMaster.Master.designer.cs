@@ -49,6 +49,15 @@ namespace Iteration4.Start {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtbxLoginName;
         
         /// <summary>
+        /// lblErrorLoginName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorLoginName;
+        
+        /// <summary>
         /// txtbxLoginPassword control.
         /// </summary>
         /// <remarks>
@@ -56,6 +65,15 @@ namespace Iteration4.Start {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtbxLoginPassword;
+        
+        /// <summary>
+        /// lblErrorLoginPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorLoginPassword;
         
         /// <summary>
         /// btnLogin control.

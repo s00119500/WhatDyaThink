@@ -34,10 +34,9 @@ namespace Iteration4.Start
 
                     SqlParameter username = new SqlParameter("@registerName", txtbxRegisterName.Value);
                     // FormsAuthentication calss is in System.Web.Security namespace
-                    //string encryptedPassword = FormsAuthentication.
-                    //HashPasswordForStoringInConfigFile(txtbxRegisterPassword.Value, "SHA1");
-                    //SqlParameter password = new SqlParameter("@password", encryptedPassword);
-                    SqlParameter password = new SqlParameter("@registerPassword", txtbxRegisterPassword.Value);
+                    string encryptedPassword = FormsAuthentication.HashPasswordForStoringInConfigFile(txtbxRegisterPassword.Value, "SHA1");
+                    SqlParameter password = new SqlParameter("@registerPassword", encryptedPassword);
+                    //SqlParameter password = new SqlParameter("@registerPassword", txtbxRegisterPassword.Value);
                     SqlParameter email = new SqlParameter("@registerEmail", txtbxRegisterEmail.Value);
                     SqlParameter telephone = new SqlParameter("@registerPhone", txtbxRegisterTelephone.Value);
                     // warnng below !!
@@ -54,6 +53,7 @@ namespace Iteration4.Start
                     }
                     else
                     {
+                        // will need to change this to welcome/confirmation page
                         Response.Redirect("~/Start/LoginRegister.aspx");
                     }
                 }

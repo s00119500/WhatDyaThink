@@ -65,6 +65,12 @@
                                 <input type="tel" name="" runat="server" value="" id="txtbxRegisterTelephone" placeholder="please enter a telephone number" /></td>
                             <td>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="txtbxRegisterTelephone"></asp:RequiredFieldValidator>
+                                <asp:RegularExpressionValidator
+                                    ControlToValidate="txtbxRegisterTelephone"
+                                    EnableClientScript="false"
+                                    ValidationExpression="\d{10}"
+                                    ErrorMessage="*"
+                                    runat="server" />
                             </td>
                         </tr>
                         <tr>
@@ -75,9 +81,9 @@
                         </tr>
                         <tr>
                             <td>
-                            <asp:Label Text="" ForeColor="Red" ID="lblError" runat="server" />
+                                <asp:Label Text="" ForeColor="Red" ID="lblError" runat="server" />
                             </td>
-                        </tr> 
+                        </tr>
                     </table>
                 </div>
             </div>
