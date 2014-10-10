@@ -49,7 +49,7 @@ namespace Iteration4.Start
                     int ReturnCode = (int)cmd.ExecuteScalar();
                     if (ReturnCode == -1)
                     {
-                        lblError.Text = "User Name already in use, please choose another user name";
+                        lblErrorRegister.Text = "User Name already in use, please choose another user name";
                     }
                     else
                     {

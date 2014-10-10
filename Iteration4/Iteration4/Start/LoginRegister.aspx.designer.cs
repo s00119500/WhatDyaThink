@@ -22,13 +22,13 @@ namespace Iteration4.Start {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtbxRegisterName;
         
         /// <summary>
-        /// RFieldValidatortxtbxName control.
+        /// lblRegisterName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFieldValidatortxtbxName;
+        protected global::System.Web.UI.WebControls.Label lblRegisterName;
         
         /// <summary>
         /// txtbxRegisterEmail control.
@@ -40,13 +40,13 @@ namespace Iteration4.Start {
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtbxRegisterEmail;
         
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// lblErrorRegisterEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.Label lblErrorRegisterEmail;
         
         /// <summary>
         /// RegularExpressionValidatorEmail control.
@@ -67,13 +67,13 @@ namespace Iteration4.Start {
         protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtbxRegisterPassword;
         
         /// <summary>
-        /// RequiredFieldValidator2 control.
+        /// lblErrorRegisterPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        protected global::System.Web.UI.WebControls.Label lblErrorRegisterPassword;
         
         /// <summary>
         /// txtbxRegisterConfirmPassword control.
@@ -85,13 +85,13 @@ namespace Iteration4.Start {
         protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtbxRegisterConfirmPassword;
         
         /// <summary>
-        /// RequiredFieldValidator3 control.
+        /// lblErrorRegisterConfirmPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        protected global::System.Web.UI.WebControls.Label lblErrorRegisterConfirmPassword;
         
         /// <summary>
         /// txtbxRegisterTelephone control.
@@ -103,13 +103,13 @@ namespace Iteration4.Start {
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtbxRegisterTelephone;
         
         /// <summary>
-        /// RequiredFieldValidator4 control.
+        /// lblErrorRegisterTelephone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
+        protected global::System.Web.UI.WebControls.Label lblErrorRegisterTelephone;
         
         /// <summary>
         /// btnRegister control.
@@ -121,12 +121,12 @@ namespace Iteration4.Start {
         protected global::System.Web.UI.WebControls.Button btnRegister;
         
         /// <summary>
-        /// lblError control.
+        /// lblErrorRegister control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblError;
+        protected global::System.Web.UI.WebControls.Label lblErrorRegister;
     }
 }
